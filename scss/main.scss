@@ -20,7 +20,7 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 350;
 
   &.lg-heading {
     font-size: 6rem;
@@ -79,6 +79,7 @@ main {
   grid-gap: 30px;
   grid-template-areas:
     "bioimage bio bio"
+    "job-heading bio bio"
     "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr);
 
@@ -92,6 +93,11 @@ main {
   .bio {
     grid-area: bio;
     font-size: 1.5rem;
+  }
+  .job-heading {
+    grid-area: job-heading;
+    font-size: 1.5rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
   }
 
   .job-1 {
@@ -179,6 +185,26 @@ main {
   background: lighten($primary-color, 50);
   color: #333;
 }
+// #home-footer {
+//   text-align: center;
+//   padding: 1rem;
+//   color: set-text-color($primary-color);
+//   height: 60px;
+
+//   .icons {
+//     //margin-top: 1rem;
+//     margin-bottom: 0.5rem;
+
+//     a {
+//       padding: 0.4rem;
+
+//       &:hover {
+//         color: $secondary-color;
+//         @include easeOut();
+//       }
+//     }
+//   }
+// }
 
 #main-footer {
   text-align: center;
