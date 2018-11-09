@@ -185,6 +185,25 @@ main {
     padding: 0.5rem;
     border-bottom: #ee681a 5px solid; }
 
+.project {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "project-image project-info1 project-info1" "project-info2 project-info2 project-video";
+  grid-template-columns: repeat(3, 1fr); }
+  .project .project-image {
+    grid-area: project-image;
+    margin: auto;
+    border-radius: 50%;
+    border: #ee681a 3px solid; }
+  .project .project-info1 {
+    grid-area: project-info1;
+    font-size: 1.5rem; }
+  .project .project-info2 {
+    grid-area: project-info2;
+    font-size: 1.5rem; }
+  .project .project-video {
+    grid-area: project-video; }
+
 .projects {
   display: grid;
   grid-gap: 0.7rem;
