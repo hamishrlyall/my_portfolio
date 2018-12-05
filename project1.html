@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Project One</title>
+    <title>One</title>
   </head>
 
   <body>
@@ -43,41 +43,50 @@
 
     <main id="project1">
       <h1 class="lg-heading">
-        Project <span class="text-secondary">One</span>
+        Lego <span class="text-secondary">Mindstorms</span>
       </h1>
-      <h2 class="sm-heading">This is my first project....</h2>
+      <h2 class="sm-heading">EV3 Lego Mindstorms Project</h2>
       <div class="project">
-        <img
-          src="img/Projects/lego.jpg"
-          alt="Hamish Lyall"
-          class="project-image"
-        />
+        <img src="img/Projects/lego.jpg" alt="Project" class="project-image" />
         <div class="project-info1">
           <h3 class="text-secondary">The Challenge</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-            eveniet odit numquam obcaecati fugit cumque fugiat deserunt iste
-            consectetur animi? Officiis at temporibus eligendi consectetur quas.
-            Expedita necessitatibus reiciendis eaque et, magnam, vero quaerat
-            voluptatibus rem laborum est magni! Dignissimos.
+            This was the final project that had to be completed for the
+            completion of my Certificate IV in Information Technology. For this
+            project, we were given the challenge of programming a Lego
+            Mindstorms EV3 robot to be able to go to a specific corner in a demo
+            environment. These corners were based on colour, yellow and black,
+            black and red, red and blue, and blue and yellow. To achieve this we
+            had a robot we could program to move forward, turn and reverse as
+            well as detect colour and distance. However, both of these sensors
+            had limitations, the distance sensor had a minimum and maximum
+            distance it could accurately detect and the colour sensor could only
+            accurately detect the correct colour from a specific distance.
           </p>
         </div>
         <div class="project-info2">
           <h3 class="text-secondary">The Solution</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur pariatur quas necessitatibus voluptatibus maiores.
-            Libero aspernatur temporibus dolorum! Repudiandae, corrupti
-            quibusdam! Mollitia, earum placeat! Nobis alias nam dolorum, atque,
-            autem culpa expedita eius consequuntur amet aperiam assumenda fugiat
-            temporibus. Omnis iusto exercitationem assumenda error id excepturi
-            suscipit quam enim laboriosam!
+            To overcome these limitations, my team decided to first limit the
+            movement of the robot to small increments of a few centremeters at a
+            time, after this command we set a command to detect distance, if the
+            robot did not detect the distance we could accurately detect colour
+            from the robot would make another movement forward. Between every
+            movement we also added a command for the robot to sleep for one
+            second, this made bugs much easier to detect and solve as we went.
+            When the robot reached the distance to the wall where it could
+            accurately detect colour we set the robot to make large or small
+            turns based on the colour it detected and where it needed to be. If
+            the robot needed to be in the Red and Black corner the robot would
+            make a small turn left if it detected black, a small turn right if
+            it detected red, a large turn right if it detected blue, and a large
+            turn left if it detected yellow. You can see our robot in action in
+            the video on the right!
           </p>
         </div>
         <div class="project-video">
           <video
-            src=""
-            poster="img/Projects/lego_small.jpg"
+            src="vid/Projects/LegoMindstormsDemo.mp4"
             width="480"
             controls
           ></video>
