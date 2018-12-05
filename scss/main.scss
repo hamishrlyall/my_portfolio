@@ -128,7 +128,6 @@ main {
   .project-image {
     grid-area: project-image;
     margin: auto;
-    border-radius: 50%;
     border: $secondary-color 3px solid;
   }
 
@@ -143,6 +142,8 @@ main {
   }
   .project-video {
     grid-area: project-video;
+    margin: auto;
+    border: $secondary-color 3px solid;
   }
 }
 

@@ -193,7 +193,6 @@ main {
   .project .project-image {
     grid-area: project-image;
     margin: auto;
-    border-radius: 50%;
     border: #ee681a 3px solid; }
   .project .project-info1 {
     grid-area: project-info1;
@@ -202,7 +201,9 @@ main {
     grid-area: project-info2;
     font-size: 1.5rem; }
   .project .project-video {
-    grid-area: project-video; }
+    grid-area: project-video;
+    margin: auto;
+    border: #ee681a 3px solid; }
 
 .projects {
   display: grid;
