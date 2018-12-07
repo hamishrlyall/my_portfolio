@@ -66,6 +66,15 @@
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
+  .project {
+    grid-template-areas:
+      "project-image"
+      "project-info1"
+      "project-info2"
+      "project-image2";
+
+    grid-template-columns: 1fr;
+  }
 }
 
 // Smartphones
