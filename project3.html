@@ -41,48 +41,104 @@
       </nav>
     </header>
 
-    <main id="project3">
+    <main id="project">
       <h1 class="lg-heading">
-        Project <span class="text-secondary">Three</span>
+        Final Diploma <span class="text-secondary">Challenge</span>
       </h1>
-      <h2 class="sm-heading">This is my third project....</h2>
+      <h2 class="sm-heading">Basketball Fixture App</h2>
       <div class="project">
         <img
-          src="img/Projects/lego.jpg"
+          src="img/Projects/FinalChallenge-small.jpg"
           alt="Hamish Lyall"
           class="project-image"
         />
         <div class="project-info1">
           <h3 class="text-secondary">The Challenge</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
-            eveniet odit numquam obcaecati fugit cumque fugiat deserunt iste
-            consectetur animi? Officiis at temporibus eligendi consectetur quas.
-            Expedita necessitatibus reiciendis eaque et, magnam, vero quaerat
-            voluptatibus rem laborum est magni! Dignissimos.
+            In the final challenge of my Diploma I was asked to develop
+            a functional prototype in a six hour coding session. The protoype
+            was required to fufill particular requirements. In the scenario we
+            were given a local basketball league wanted a web application that
+            team managers could use to create, edit and track fixtured matches, 
+            venues, and booking costs. The app required OAuth so that the managers
+            could log in using their google accounts and that the data would only
+            be able to be viewed or manipulated by authorized users. Another 
+            requirement was that the fixtures could be seperated into upcoming
+            and past fixtures and that only past fixtures could have costs added.
+            Lastly, it was required that the managers would have their total costs
+            tallied and displayed next to their name.
+
           </p>
         </div>
         <div class="project-info2">
           <h3 class="text-secondary">The Solution</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur pariatur quas necessitatibus voluptatibus maiores.
-            Libero aspernatur temporibus dolorum! Repudiandae, corrupti
-            quibusdam! Mollitia, earum placeat! Nobis alias nam dolorum, atque,
-            autem culpa expedita eius consequuntur amet aperiam assumenda fugiat
-            temporibus. Omnis iusto exercitationem assumenda error id excepturi
-            suscipit quam enim laboriosam!
+            In order to achieve this, I began by creating a database project with a
+            'Managers' and 'Fixtures' table. I then created a ASP.Net Web application
+            using Entity Framework and MVC to streamline the frontend development process.
+            To achieve discrimination between upcoming and past fixtures I added two methods
+            into my Fixtures Controller which would check if the current date was less or more
+            than the date of each fixture, I then added views which would correspond with these
+            parameters. To create functionality for users to add costs to past fixtures
+            I simply removed the auto generated Update functionality from each page except my Past Fixtures
+            page and to show the TotalSpent I added a method to my Managers View that would add the Fixtures
+            Spent columns where the Managers Ids were the same. Finally, to implement the Authorization
+            functionality I setup simple google Oauth which generated a new ASPNet database. I added the methods
+            to all my controllers that would only allow Users to see the pages if their EmailConfirmed attribute
+            was set to true. When new users were added this would automatically be set to 'false' and could then
+            be changed by Authorized users in the ASPNetUsers view. To see these views click on the slideshow to the right.
           </p>
         </div>
-        <div class="project-video">
-          <video
-            src=""
-            poster="img/Projects/lego_small.jpg"
-            width="480"
-            controls
-          ></video>
-        </div>
-      </div>
+        <div class="project-image2">
+                <div class="project-image">
+                  <img src="img/Projects/FinalChallengeSlideshow/HomePage.PNG" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+              
+              <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+              
+                  <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="img/Projects/FinalChallengeSlideshow/HomePage.PNG" style="width:100%">
+                  </div>
+              
+                  <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="img/Projects/FinalChallengeSlideshow/ASPNetUsers.PNG" style="width:100%">
+                  </div>
+              
+                  <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="img/Projects/FinalChallengeSlideshow/Fixtures.PNG" style="width:100%">
+                  </div>
+                  
+                  <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="img/Projects/FinalChallengeSlideshow/Managers.PNG" style="width:100%">
+                  </div>
+                  
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              
+                  <div class="caption-container">
+                    <p id="caption"></p>
+                  </div>
+
+                  <div class="column">
+                      <img class="demo cursor" src="img/Projects//FinalChallengeSlideshow/HomePage-small.png" style="width:100%" onclick="currentSlide(1)" alt="Basketball Fixture App Home Page">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="img/Projects//FinalChallengeSlideshow/ASPNetUsers-small.png" style="width:100%" onclick="currentSlide(2)" alt="ASPNetUsers View - Email confirmed was used to Authorize accounts">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="img/Projects//FinalChallengeSlideshow/Fixtures-small.png" style="width:100%" onclick="currentSlide(3)" alt="Fixtures View - Displays details of various fixtures, Could be narrowed down to Upcoming or Past">
+                    </div>
+                    <div class="column">
+                      <img class="demo cursor" src="img/Projects//FinalChallengeSlideshow/Managers-small.png" style="width:100%" onclick="currentSlide(4)" alt="Managers View - Displays all managers and adds the sum total of each Managers Spent as TotalSpent">
+                    </div>
+              </div>             
+          </div>
     </main>
 
     <footer id="main-footer">Copyright &copy; 2018</footer>
